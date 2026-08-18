@@ -138,3 +138,44 @@ main .columns-feature a.button:focus {
     object-fit: cover;
   }
 }
+
+/* --- Navy feature variant (Venetian Rewards, Meetings): full-bleed image
+ *     beside a cream text panel with dark copy, matching the live site. --- */
+.section.navy .columns-feature > div {
+  gap: 0;
+}
+
+.section.navy .columns-feature > div > div:not(.columns-feature-img-col) {
+  background-color: var(--brand-cream);
+  color: var(--brand-burgundy);
+  padding: 48px 40px;
+}
+
+.section.navy .columns-feature h2,
+.section.navy .columns-feature h3,
+.section.navy .columns-feature p {
+  color: var(--brand-burgundy);
+}
+
+/* Primary CTA (Join Today / Plan Your Meeting) = red filled. The first
+ * .button-container is the one that has a following .button-container sibling.
+ * Extra :not(#\9) bumps specificity above the base `main .columns-feature
+ * a.button:any-link` rule without relying on a bogus descendant `main`. */
+main .section.navy .columns-feature .button-container:has(~ .button-container) a.button:any-link {
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--brand-cream);
+}
+
+main .section.navy .columns-feature .button-container:has(~ .button-container) a.button:hover,
+main .section.navy .columns-feature .button-container:has(~ .button-container) a.button:focus {
+  background-color: #8a0303;
+  border-color: #8a0303;
+  color: var(--brand-cream);
+}
+
+@media (width >= 900px) {
+  .section.navy .columns-feature > div > div:not(.columns-feature-img-col) {
+    padding: 64px 56px;
+  }
+}
