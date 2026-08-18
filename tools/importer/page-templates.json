@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.venetianlasvegas.com/"
+      ],
+      "coverageGaps": [],
+      "description": "Venetian Las Vegas homepage - hero carousel, navigation cards, tower/resort comparison, TripAdvisor reviews, offer card sliders, and teaser bar. Includes header and footer experience fragments.",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)"
+          ]
+        },
+        {
+          "name": "cards-nav",
+          "instances": [
+            "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .venrc5-navigation-cards"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .cmp-experiencefragment--tower-comparison",
+            "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .teaser-bar .cmp-teaser"
+          ]
+        },
+        {
+          "name": "quote-review",
+          "instances": [
+            "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .tripadvisor-reviews"
+          ]
+        },
+        {
+          "name": "cards-offer",
+          "instances": [
+            ".cmp-experiencefragment--offer-card-slider .card-list",
+            ".cmp-experiencefragment--content-fragment-slider .card-list"
+          ]
+        },
+        {
+          "name": "cards-award",
+          "instances": [
+            "div.cmp-column-container.cmp-column-container--repeat > div.cmp-column-container__container.cmp-column-container__container--full > div.cmp-column-container__columns.cmp-column-container--repeat"
+          ]
+        },
+        {
+          "name": "columns-cta",
+          "instances": [
+            ".column-container .cmp-column-container__container--narrow > .cmp-column-container__columns.cmp-column-container--repeat"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero carousel",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Navigation cards",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .venrc5-navigation-cards",
+          "style": null,
+          "blocks": [
+            "cards-nav"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Tower comparison",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .cmp-experiencefragment--tower-comparison",
+          "style": "burgundy",
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Traveler review",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .tripadvisor-reviews",
+          "style": null,
+          "blocks": [
+            "quote-review"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Deals & Packages",
+          "selector": ".cmp-experiencefragment--offer-card-slider .card-list",
+          "style": null,
+          "blocks": [
+            "cards-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Awards & Recognition",
+          "selector": "div.cmp-column-container.cmp-column-container--repeat > div.cmp-column-container__container.cmp-column-container__container--full > div.cmp-column-container__columns.cmp-column-container--repeat",
+          "style": "burgundy",
+          "blocks": [
+            "cards-award"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Venetian Rewards feature",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .teaser-bar .cmp-teaser",
+          "style": "navy",
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Meetings Made Magnificent feature",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .teaser-bar .cmp-teaser",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Entertainment",
+          "selector": ".cmp-experiencefragment--content-fragment-slider .card-list",
+          "style": "burgundy",
+          "blocks": [
+            "cards-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Ready to Stay / Rewards teaser bar",
+          "selector": "body > div.root.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) .teaser-bar",
+          "style": "burgundy",
+          "blocks": [
+            "columns-cta"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

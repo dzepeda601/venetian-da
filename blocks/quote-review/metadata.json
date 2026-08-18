@@ -1,0 +1,45 @@
+{
+  "variantName": "quote-review",
+  "baseBlock": "quote",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "testimonial",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "single featured guest testimonial: quotation + attribution (guest + date)",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "hasDescription": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "single highlighted guest / customer review",
+      "featured testimonials with attribution",
+      "pull quotes on a light band"
+    ],
+    "notSuitableFor": [
+      "multiple rotating reviews (use carousel)",
+      "grids of testimonials (use cards)",
+      "reviews requiring embedded star widgets from a third party"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  },
+  "reuseEvaluation": {
+    "consideredExisting": "none (no quote variant existed)",
+    "decision": "create-new",
+    "reason": "No custom quote variant existed in the project; created a review/testimonial variant for the featured traveler review."
+  }
+}

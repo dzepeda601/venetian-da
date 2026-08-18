@@ -1,0 +1,46 @@
+{
+  "variantName": "cards-award",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "awards",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "per card (no image): source heading + award description line(s)",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "hasDescription": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "awards / recognition columns with a source heading and award text",
+      "text-only card grids on a dark band",
+      "stat or accolade rows without imagery"
+    ],
+    "notSuitableFor": [
+      "image-led cards",
+      "cards with CTAs and large imagery",
+      "icon + label callout strips"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  },
+  "reuseEvaluation": {
+    "consideredExisting": "cards-callouts",
+    "similarityScore": 0.55,
+    "decision": "create-new",
+    "reason": "cards-callouts is an icon + short-label strip with no description; the Awards & Recognition items are text-only (heading + description, no icon). Different purpose and content pattern. Below the 80% reuse threshold. This is a text-only (no-images) card variant."
+  }
+}

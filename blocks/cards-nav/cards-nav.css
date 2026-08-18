@@ -1,0 +1,97 @@
+/* Block: cards-nav -- navigation photo tiles with overlaid label
+   Values extracted from source computed styles (venetianlasvegas.com). */
+
+.cards-nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  .cards-nav > ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.cards-nav > ul > li {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+/* Image fills the tile */
+.cards-nav .cards-nav-card-image {
+  line-height: 0;
+}
+
+.cards-nav .cards-nav-card-image picture {
+  display: block;
+}
+
+.cards-nav > ul > li img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Dark gradient scrim over the lower part of the image */
+.cards-nav > ul > li::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, rgb(0 0 0 / 0%) 45%, rgb(0 0 0 / 50%) 79%);
+  pointer-events: none;
+}
+
+/* Label overlay -- fills the tile so the whole card is clickable */
+.cards-nav .cards-nav-card-body {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-nav .cards-nav-card-body p {
+  margin: 0;
+  height: 100%;
+}
+
+/* Reset EDS button auto-decoration back to a plain text label */
+.cards-nav .cards-nav-card-body a,
+main .cards-nav .cards-nav-card-body a.button:any-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 8px 30px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1.44px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.cards-nav .cards-nav-card-body a:hover,
+main .cards-nav .cards-nav-card-body a.button:any-link:hover {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,45 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "cta-bar",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "two equal text panels, each with heading + short copy + single CTA",
+    "buttonCount": 2,
+    "imageCount": 0,
+    "hasDescription": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "two side-by-side call-to-action panels on a dark band",
+      "split conversion bars (e.g. Book / Sign Up)",
+      "paired text-only promos with a CTA each"
+    ],
+    "notSuitableFor": [
+      "image + text feature layouts (use columns-feature)",
+      "single centered CTA (default content)",
+      "repeating card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  },
+  "reuseEvaluation": {
+    "consideredExisting": "none (no columns CTA variant existed)",
+    "decision": "create-new",
+    "reason": "No custom columns variant existed; the bottom teaser bar is a two-panel text-only CTA layout distinct from the image+text columns-feature, warranting its own dark cta-bar variant."
+  }
+}

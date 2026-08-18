@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "venetian-da": {
+      "previewOrg": "dzepeda601",
+      "previewSite": "venetian-da",
+      "contentHostUrl": "https://content.da.live/dzepeda601/venetian-da/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "variantName": "cards-nav",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "navigation-tiles",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "per card: photo + linked label",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "hasDescription": false
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "photo-led navigation tile rows (browse-by-category with real imagery)",
+      "homepage quick-links to key sections",
+      "image + single linked label tiles on a light background"
+    ],
+    "notSuitableFor": [
+      "cards with descriptive paragraphs or CTAs",
+      "icon-only callout strips",
+      "text-only card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  },
+  "reuseEvaluation": {
+    "consideredExisting": "cards-category",
+    "similarityScore": 0.67,
+    "decision": "create-new",
+    "reason": "cards-category is a light, compact category-tile variant but uses icon-pattern thumbnails from the Cat Parts site; Venetian nav tiles use large editorial photos with a different aspect/treatment. Below the 80% reuse threshold."
+  }
+}

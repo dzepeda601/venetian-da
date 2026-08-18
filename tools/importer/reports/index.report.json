@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.venetianlasvegas.com/",
+  "path": "index",
+  "timestamp": "2026-08-18T05:48:37.453Z",
+  "title": "Luxury Hotel in Las Vegas | The Venetian Resort Las Vegas",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "cards-nav",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "quote-review",
+    "cards-offer",
+    "cards-offer",
+    "cards-award",
+    "cards-award",
+    "columns-cta"
+  ]
+}

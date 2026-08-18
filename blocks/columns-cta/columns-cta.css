@@ -1,0 +1,91 @@
+/* Block: columns-cta — "Ready to Stay?" / "Venetian Rewards" two-panel CTA bar
+ * Values extracted from source computed styles (venetianlasvegas.com).
+ * Sits on a dark section (.section.burgundy) — text is cream, CTA is cream on burgundy.
+ */
+
+.columns-cta {
+  padding: 32px 0;
+}
+
+/* Row: mobile-first single column, stacked panels */
+.columns-cta > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Each panel — center-aligned text column */
+.columns-cta > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Heading — romie serif, not uppercase (overrides global main h3 uppercase) */
+.columns-cta h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.23;
+  text-transform: none;
+  color: var(--brand-cream);
+}
+
+/* Copy */
+.columns-cta p {
+  margin: 18px 0 0;
+  max-width: 520px;
+  font-family: var(--body-font-family);
+  font-size: 15.6px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--brand-cream);
+}
+
+/* CTA button container */
+.columns-cta .button-container {
+  margin: 30px 0 0;
+}
+
+/* CTA link — cream fill, burgundy text, gold hairline border */
+.columns-cta a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 18px 24px;
+  border: 1px solid #e2c89f;
+  border-radius: 2px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.44px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--brand-cream);
+  color: var(--brand-burgundy);
+}
+
+.columns-cta a.button:any-link:hover,
+.columns-cta a.button:any-link:focus {
+  background-color: #e2c89f;
+  color: var(--brand-burgundy);
+}
+
+/* Desktop — two equal columns side-by-side */
+@media (width >= 900px) {
+  .columns-cta {
+    padding: 56px 0;
+  }
+
+  .columns-cta > div {
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+}

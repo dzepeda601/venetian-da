@@ -1,0 +1,47 @@
+{
+  "variantName": "cards-offer",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promo",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "per card: feature image + title + description + up to two CTAs",
+    "buttonCount": 2,
+    "imageCount": 1,
+    "hasDescription": true,
+    "hasCTA": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "offer / deal / package cards with image + title + description + CTAs",
+      "event or show cards with image + title + supporting detail lines",
+      "horizontally-scrolling promotional card rows on a light background"
+    ],
+    "notSuitableFor": [
+      "text-only card grids (use a no-images card variant)",
+      "icon + label callout strips",
+      "simple navigation tiles without descriptions"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 2,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  },
+  "reuseEvaluation": {
+    "consideredExisting": "cards-promo",
+    "similarityScore": 0.7,
+    "decision": "create-new",
+    "reason": "cards-promo matches purpose (promo, image + title + body + CTA) but is a 'colored' card-background treatment from the Cat Parts site; Venetian offers sit on a light band with a single CTA emphasis and slider presentation. Below the 80% reuse threshold. Reused within this page for both the deals slider (section 5) and the events slider (section 9)."
+  }
+}

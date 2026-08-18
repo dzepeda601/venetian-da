@@ -1,0 +1,45 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "two columns: large image on one side, heading + paragraph + CTA(s) on the other",
+    "buttonCount": 2,
+    "imageCount": 1,
+    "hasDescription": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image + text feature promos (rewards, meetings, amenities)",
+      "two-image comparison layouts side-by-side",
+      "any balanced two-column media + copy section"
+    ],
+    "notSuitableFor": [
+      "repeating uniform card grids (use cards)",
+      "rotating slideshows (use carousel)",
+      "single-column stacked content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 3,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  },
+  "reuseEvaluation": {
+    "consideredExisting": "none (no columns variant existed)",
+    "decision": "create-new",
+    "reason": "No custom columns variant existed in the project; created a feature variant. Reused within this page for the tower comparison (section 3), Venetian Rewards feature (section 7), and Meetings Made Magnificent feature (section 8)."
+  }
+}

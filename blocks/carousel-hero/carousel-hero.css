@@ -1,0 +1,240 @@
+/* carousel-hero -- full-bleed hero carousel, styled from venetianlasvegas.com source */
+
+/* full-viewport-width break-out of the EDS section max-width */
+.carousel-hero-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.carousel-hero {
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-slides-container {
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-slides,
+.carousel-hero .carousel-hero-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-hero .carousel-hero-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+}
+
+.carousel-hero .carousel-hero-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-hero .carousel-hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  width: 100%;
+  min-height: 70vh;
+}
+
+/* full-bleed image fills the slide */
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark overlay for text legibility (source: black over image, weighted to bottom where text sits) */
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%) 0%, rgb(0 0 0 / 15%) 45%, rgb(0 0 0 / 55%) 100%);
+  z-index: 1;
+}
+
+/* overlaid content: bottom-left, white text */
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 32px 24px 72px;
+  color: rgb(255 255 255);
+  text-align: left;
+}
+
+.carousel-hero .carousel-hero-slide-content > div {
+  max-width: 720px;
+}
+
+.carousel-hero .carousel-hero-slide-content h1,
+.carousel-hero .carousel-hero-slide-content h2 {
+  margin: 0 0 18px;
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  color: rgb(255 255 255);
+  text-transform: none;
+}
+
+.carousel-hero .carousel-hero-slide-content p {
+  margin: 0 0 18px;
+  font-family: var(--body-font-family);
+  font-weight: 300;
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+  color: rgb(255 255 255);
+}
+
+/* CTA button (source: red fill, cream text, tight uppercase) */
+.carousel-hero .carousel-hero-slide-content .button-container {
+  margin: 6px 0 0;
+}
+
+.carousel-hero .carousel-hero-slide-content a.button:any-link {
+  margin: 0;
+  padding: 18px 24px;
+  border: 1px solid var(--brand-red);
+  border-radius: 2px;
+  background-color: var(--brand-red);
+  color: var(--brand-cream);
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.carousel-hero .carousel-hero-slide-content a.button:hover,
+.carousel-hero .carousel-hero-slide-content a.button:focus {
+  background-color: #8a0303;
+  border-color: #8a0303;
+  color: var(--brand-cream);
+}
+
+/* slide indicators (dots) -- bottom-right cluster */
+.carousel-hero .carousel-hero-slide-indicators {
+  position: absolute;
+  right: 96px;
+  bottom: 30px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  line-height: 0;
+}
+
+.carousel-hero .carousel-hero-slide-indicator button {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(226 200 159);
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 35%);
+  transition: background-color 0.2s;
+}
+
+.carousel-hero .carousel-hero-slide-indicator button:disabled,
+.carousel-hero .carousel-hero-slide-indicator button:hover,
+.carousel-hero .carousel-hero-slide-indicator button:focus-visible {
+  background-color: rgb(226 200 159);
+}
+
+/* prev / next arrows -- bottom-right, circular white outline */
+.carousel-hero .carousel-hero-navigation-buttons {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-hero .carousel-hero-navigation-buttons button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button:hover,
+.carousel-hero .carousel-hero-navigation-buttons button:focus-visible {
+  background-color: rgb(255 255 255 / 20%);
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  width: 9px;
+  height: 9px;
+  border: 2px solid rgb(255 255 255);
+  border-bottom: 0;
+  border-left: 0;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-hero .carousel-hero-navigation-buttons button.slide-next::after {
+  left: calc(50% - 2px);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* desktop: taller hero, roomier content inset */
+@media (width >= 900px) {
+  .carousel-hero .carousel-hero-slide {
+    min-height: calc(100dvh - var(--header-height));
+  }
+
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-content {
+    padding: 100px 230px 45px;
+  }
+
+  .carousel-hero .carousel-hero-slide-content h1,
+  .carousel-hero .carousel-hero-slide-content h2 {
+    font-size: 62px;
+    letter-spacing: 0.3px;
+  }
+
+  .carousel-hero .carousel-hero-slide-content p {
+    font-size: var(--body-font-size-m);
+  }
+
+  .carousel-hero .carousel-hero-slide-indicators {
+    right: 100px;
+    bottom: 48px;
+  }
+
+  .carousel-hero .carousel-hero-navigation-buttons {
+    right: 28px;
+    bottom: 40px;
+  }
+}

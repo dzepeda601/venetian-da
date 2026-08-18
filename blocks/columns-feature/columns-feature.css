@@ -1,0 +1,140 @@
+/* columns-feature
+ * Two patterns share this block:
+ *  A. Tower comparison (burgundy) — 2 self-contained cells, each stacks
+ *     image + title + subhead + copy + CTAs; two towers side-by-side.
+ *  B. Feature (navy) — dedicated image column (.columns-feature-img-col)
+ *     beside a text column; image and text side-by-side.
+ * Values extracted from source computed styles (see migration-work).
+ * Text color is inherited from the section (burgundy/navy => cream).
+ */
+
+/* --- Base (mobile-first): everything stacks --- */
+.columns-feature > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-feature > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-feature img {
+  display: block;
+  width: 100%;
+}
+
+/* --- Typography (romie serif; sizes from source) --- */
+.columns-feature h2 {
+  margin: 0 0 0.15em;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.columns-feature h3 {
+  margin: 0.4em 0 0.15em;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.columns-feature p {
+  margin: 0 0 0.5em;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.28px;
+}
+
+/* Pattern A: the image sits in a <p> inside a self-contained cell.
+   Pull it above the heading and strip the wrapping paragraph's spacing. */
+.columns-feature p:has(picture) {
+  order: -1;
+  margin: 0;
+}
+
+.columns-feature p:has(picture) img {
+  aspect-ratio: 27 / 25;
+  object-fit: cover;
+}
+
+/* --- CTA buttons: cream fill, burgundy text, gold hairline border --- */
+main .columns-feature a.button:any-link {
+  margin: 0;
+  border: 1px solid rgb(226 200 159);
+  border-radius: 2px;
+  padding: 18px 24px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  background-color: var(--brand-cream);
+  color: var(--brand-burgundy);
+}
+
+main .columns-feature a.button:hover,
+main .columns-feature a.button:focus {
+  background-color: rgb(226 200 159);
+  color: var(--brand-burgundy);
+}
+
+.columns-feature .button-container {
+  margin: 16px 0 0;
+}
+
+.columns-feature .button-container:first-of-type {
+  margin-top: 24px;
+}
+
+/* --- Desktop --- */
+@media (width >= 900px) {
+  .columns-feature > div {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .columns-feature > div > div {
+    flex: 1;
+  }
+
+  .columns-feature h2 {
+    font-size: 48px;
+    line-height: 1.29;
+  }
+
+  .columns-feature h3 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .columns-feature p {
+    font-size: 27px;
+    line-height: 1.33;
+  }
+
+  /* Pattern B: image column fills the row height beside centered text */
+  .columns-feature > div:has(.columns-feature-img-col) {
+    align-items: stretch;
+    gap: 48px;
+  }
+
+  .columns-feature > div:has(.columns-feature-img-col) > div:not(.columns-feature-img-col) {
+    justify-content: center;
+  }
+
+  .columns-feature .columns-feature-img-col {
+    padding: 0;
+  }
+
+  .columns-feature .columns-feature-img-col img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

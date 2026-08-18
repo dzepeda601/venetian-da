@@ -1,0 +1,76 @@
+/*
+ * Venetian Las Vegas brand design tokens
+ * Extracted from https://www.venetianlasvegas.com/
+ */
+
+/* Romie (headings) — self-hosted from source */
+@font-face {
+  font-family: romie;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Romie-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: romie;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Romie-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: romie;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Romie-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: romie;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Romie-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: romie;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/Romie-Italic.woff2') format('woff2');
+}
+
+:root {
+  /* brand fonts — romie (serif headings), brother-1816 (sans body, via Typekit) */
+  --heading-font-family: romie, "Times New Roman", serif;
+  --body-font-family: "brother-1816", "Helvetica Neue", arial, sans-serif;
+
+  /* brand colors */
+  --background-color: #fdf7ef;   /* cream */
+  --text-color: #450206;         /* burgundy */
+  --link-color: #450206;
+  --link-hover-color: #6a1a1f;
+
+  /* section palette */
+  --brand-burgundy: #450206;
+  --brand-cream: #fbf0df;      /* warm cream for text/accents on dark sections */
+  --brand-cream-bg: #fdf7ef;   /* page background cream */
+  --brand-navy: #14243f;
+  --brand-red: #a40404;
+
+  /* spacing */
+  --section-padding: 64px;
+  --nav-height: 113px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 62px;
+  --heading-size-xl: 35px;
+  --heading-size-l: 35px;
+  --heading-size-m: 28px;
+  --heading-size-s: 24px;
+  --heading-size-xs: 21px;
+}

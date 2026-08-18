@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-08-18T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.venetianlasvegas.com/",
+    "originPage": "The Venetian Resort Las Vegas homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "per slide: full-bleed background image + title + subtitle + single CTA",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "slideCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage top hero carousels with full-bleed background photos",
+      "rotating promotional banners with title + subtitle + CTA per slide",
+      "landing pages needing an above-the-fold slideshow"
+    ],
+    "notSuitableFor": [
+      "static single-image heros (use a hero block)",
+      "content galleries without overlaid text",
+      "small inline image sliders"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-18T00:00:00.000Z"
+  }
+}

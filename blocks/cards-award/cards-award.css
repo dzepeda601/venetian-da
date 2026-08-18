@@ -1,0 +1,69 @@
+/*
+ * cards-award — "Awards & Recognition" band
+ * Text-only award columns on a dark burgundy section (cream text).
+ * Values extracted from https://www.venetianlasvegas.com/ computed styles.
+ * The block sits inside .section.burgundy, which supplies the burgundy
+ * background and cream color/heading overrides (see styles/styles.css).
+ */
+
+.cards-award > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.cards-award > ul > li {
+  border: 0;
+  background: none;
+}
+
+.cards-award .cards-award-card-body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* award source heading (e.g. "Best of Las Vegas") */
+.cards-award .cards-award-card-body h3 {
+  margin: 0 0 8px;
+  font-family: var(--heading-font-family);
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-transform: none; /* override global uppercase h3 */
+  color: var(--brand-cream);
+}
+
+/* award description line(s) */
+.cards-award .cards-award-card-body p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  color: var(--brand-cream);
+}
+
+@media (width >= 900px) {
+  .cards-award > ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .cards-award > ul > li {
+    padding: 0 12px;
+  }
+
+  /* thin cream vertical dividers between columns */
+  .cards-award > ul > li + li {
+    border-left: 1px solid var(--brand-cream);
+  }
+}

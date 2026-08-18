@@ -1,0 +1,73 @@
+/* Block: quote-review
+ * Featured guest testimonial on the cream band.
+ * Values extracted from source .tripadvisor-reviews review widget:
+ *   - centered layout (text-align: center)
+ *   - quote + attribution both burgundy rgb(69, 2, 6) = --brand-burgundy
+ *   - attribution: brother-1816, uppercase, weight 700, letter-spacing 1.44px
+ *   - meta margins 20px top / 32px bottom, name / date separated by "•"
+ */
+
+.quote-review {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.quote-review blockquote {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* the quotation — large centered serif in burgundy */
+.quote-review blockquote .quote-review-quotation {
+  margin: 0;
+  color: var(--brand-burgundy);
+}
+
+.quote-review blockquote .quote-review-quotation p {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--brand-burgundy);
+}
+
+/* attribution below the quote — uppercase brother-1816, letter-spaced */
+.quote-review blockquote .quote-review-attribution {
+  margin: 20px 0 0;
+  color: var(--brand-burgundy);
+}
+
+.quote-review blockquote .quote-review-attribution p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  color: var(--brand-burgundy);
+}
+
+/* the date (February 2026) rendered as <cite> — accent + bullet separator */
+.quote-review blockquote .quote-review-attribution cite {
+  font-style: normal;
+  color: var(--brand-red);
+}
+
+.quote-review blockquote .quote-review-attribution cite::before {
+  content: '\2022';
+  margin: 0 0.6ch;
+  color: var(--brand-burgundy);
+}
+
+@media (width >= 900px) {
+  .quote-review {
+    padding: 72px 0;
+  }
+
+  .quote-review blockquote .quote-review-quotation p {
+    font-size: 30px;
+  }
+}
