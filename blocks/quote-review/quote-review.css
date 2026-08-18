@@ -18,6 +18,15 @@
   padding: 0;
 }
 
+/* 5-star rating above the quote */
+.quote-review blockquote .quote-review-rating {
+  margin: 0 0 20px;
+  color: var(--brand-red);
+  font-size: 22px;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
 /* the quotation — large centered serif in burgundy */
 .quote-review blockquote .quote-review-quotation {
   margin: 0;
