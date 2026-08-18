@@ -45,26 +45,17 @@ export default function parse(element, { document }) {
       const cell = [];
       const label = card.querySelector('.cmp-card-comparison__image_container__title, h2');
       const image = card.querySelector('.cmp-card-comparison__image_container__image img, img');
-      const subtitle = card.querySelector('.cmp-card-comparison__content_wrapper__card__content__title, h3');
-      const shortDesc = card.querySelector('.cmp-card-comparison__content_wrapper__card__content__short_description');
-      const desc = card.querySelector('.cmp-card-comparison__content_wrapper__card__content__description');
-      // CTAs: exclude the "Back" affordance (a <p>, not a link).
-      const ctas = Array.from(card.querySelectorAll('a.cmp-card-comparison__cta, .cmp-card-comparison__content_wrapper__card__content__ctas a'));
-
+      // Only the label + image are shown on the live site's default view. The
+      // subtitle, short/long descriptions and per-tower CTAs live on the flip-card
+      // BACK (revealed on interaction) and are intentionally excluded so the
+      // migrated block matches the source's visible state. The shared intro copy
+      // and "View Hotels" CTA are authored as default content around the block.
       if (label) {
         const h = document.createElement('h2');
         h.textContent = (label.textContent || '').trim();
         cell.push(h);
       }
       if (image) cell.push(image);
-      if (subtitle) {
-        const h = document.createElement('h3');
-        h.textContent = (subtitle.textContent || '').trim();
-        cell.push(h);
-      }
-      if (shortDesc) cell.push(shortDesc);
-      if (desc) cell.push(desc);
-      ctas.forEach((cta) => cell.push(cta));
       row.push(cell);
     });
     if (row.length) {
