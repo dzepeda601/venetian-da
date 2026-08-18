@@ -38,12 +38,18 @@ function initCarousel(block, track) {
   next.addEventListener('click', () => scrollByPage(1));
   track.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', update);
+  window.addEventListener('load', update);
 
-  // Defer the first state read until after layout so scrollWidth is measured
-  // (otherwise "next" wrongly reports disabled on load).
+  // Recompute whenever the track's rendered size changes — covers lazy-loaded
+  // images (further down the page) that grow scrollWidth after first paint and
+  // would otherwise leave "next" wrongly disabled.
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => update());
+    ro.observe(track);
+  }
+
   update();
   requestAnimationFrame(update);
-  window.addEventListener('load', update);
 }
 
 export default function decorate(block) {
