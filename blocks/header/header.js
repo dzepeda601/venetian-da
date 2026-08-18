@@ -7,7 +7,7 @@ import { getMetadata } from '../../scripts/aem.js';
  * @returns {Promise<Document|null>} parsed fragment document
  */
 async function fetchNav(navPath) {
-  const candidates = ['/content/nav.plain.html', `${navPath}.plain.html`];
+  const candidates = [`${navPath}.plain.html`, '/nav.plain.html', '/content/nav.plain.html'];
   for (let i = 0; i < candidates.length; i += 1) {
     try {
       // eslint-disable-next-line no-await-in-loop

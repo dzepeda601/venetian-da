@@ -43,10 +43,20 @@ function decorateSections(footer) {
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  // load footer as fragment (content lives under /content for this project)
+  // load footer as fragment. On the deployed site the content mount maps to the
+  // site root (/footer); locally it is served from /content/footer. Try both.
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/content/footer';
-  const fragment = await loadFragment(footerPath);
+  const candidates = footerMeta
+    ? [new URL(footerMeta, window.location).pathname]
+    : ['/footer', '/content/footer'];
+
+  let fragment = null;
+  for (let i = 0; i < candidates.length && !fragment; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const loaded = await loadFragment(candidates[i]);
+    if (loaded && loaded.firstElementChild) fragment = loaded;
+  }
+  if (!fragment) return;
 
   // decorate footer DOM
   block.textContent = '';
